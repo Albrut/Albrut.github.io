@@ -3,15 +3,46 @@
 <head>
     <link rel ="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <link rel="stylesheet" href="../styles/reg_yur.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Регистрация для юридических лиц</title>
 </head>
 <body>
-    <div></div>
-    <div class="ЛОГО">
-        <p>LOGO</p>
+    <div class="logo"> <!-- Лого -->
+        <p>ЛОГО</p>
     </div>
-    
+    <div class="wrapper_for_blocks">
+        <div class="name_org"> <!-- Поле для организации--> 
+            <input type="text" name="name_orga" placeholder="Название организации">
+        </div>
+
+        <div class="code_okpo">
+            <input type="text" name="code_OKPO" placeholder="Код ОКПО">
+        </div>
+
+        <div class="regiter_number">
+            <input type="text" name="regiter_number" placeholder="Регистрационный номер">
+        </div>
+        <div class="full_name_ceo">
+            <input type="text" name="full_name_ceo" placeholder="ФИО руководителя">
+        </div>
+        <div class="position_ceo">
+            <input type="text" name="position_ceo" placeholder="Должность руководителя">
+        </div>
+        <div class="full_name_dov_lico">
+            <input type="text" name="full_name_dov_lico" placeholder="ФИО доверенного лица">
+        </div>
+        <div class="yur_addres">
+            <input type="text" name="yur_addres" placeholder="Юридический адрес">
+        </div>
+        <div class="fact_addres">
+            <input type="text" name="fact_addres" placeholder="Фактический адрес">
+        </div>
+    </div>
+    <div class="buttons">
+        <span><button>Назад</button></span>
+        <span><button>Регистрация</button></span>
+    </div>
 </body>
 </html>
