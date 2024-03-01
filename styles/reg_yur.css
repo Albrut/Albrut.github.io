@@ -16,6 +16,7 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap; 
 }
 
 .wrapper_for_blocks div{
