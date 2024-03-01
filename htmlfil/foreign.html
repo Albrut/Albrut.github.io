@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/foreign.css">
+    <title></title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img src="static/logo.jpg" alt="logo" />
+            </div>
+            <ul class="navbar_buttons">
+                <li class="navbar_button">
+                    <a href="dms_rules.html">О ДМС</a>
+                </li>
+                <li class="navbar_button">
+                    <a href="services.html">Услуги</a>
+                </li>
+                <li class="navbar_button">
+                    <a href="">Клининки</a>
+                </li>
+                <li class="navbar_button">
+                    <a href="profile.html">Профиль</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="nazvanie">
+        <h1>Выезд за рубеж</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="container">
+            <input id="searchbar" type="text" name="search" placeholder="Искать услуги">
+        </div>
+
+        <div class="polya">
+            <div class="model">
+                <input id="up" value="Сумма выплат">
+            </div>
+        </div>
+
+        <div class="polya">
+            <div class="papers">
+                <div id="field">
+                    <input id="paper" placeholder="Мед. документы">
+                    <div class="buttons"> <!-- Кнопочки -->
+                        <button id="widget" type="submit"></button>
+                    </div>
+                </div>
+            </div>
+            <div id="field">
+                <input id="paper" placeholder="Документы на выезд">
+                <div class="buttons"> <!-- Кнопочки -->
+                    <button id="widget" type="submit"></button>
+                </div>
+            </div>
+
+        </div>
+        <div id="field">
+            <input id="paper" placeholder="Чеки">
+            <div class="buttons"> <!-- Кнопочки -->
+                <button id="widget" type="submit"></button>
+            </div>
+        </div>
+
+        <div class="buttons"> <!-- Кнопочки -->
+            <button type="submit">Сохранить</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleCheckbox(id) {
+            var checkbox = document.getElementById(id);
+            checkbox.classList.toggle("checked");
+        }
+    </script>
+    </div>
+</body>
+
+</html>
