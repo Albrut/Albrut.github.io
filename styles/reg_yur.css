@@ -30,6 +30,7 @@ body{
     margin: 0 auto;
     border-radius: 12px;
     font-weight: 400px;
+    border: 0;
 }
 .buttons{
     text-align: center;
@@ -51,4 +52,5 @@ body{
 }
 .buttons button[type="submit"] {
     font-weight: bold;
+    border: 0;
 }

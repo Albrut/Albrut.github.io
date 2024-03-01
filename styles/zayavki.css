@@ -1,0 +1,40 @@
+body{
+    font-family: "Ubuntu";
+}
+.logo p {
+    font-size: 48px;
+    color: rgb(11, 60, 50);
+    text-align: center;
+    padding-top: 40px;
+    font-weight: 700;
+    height: 60px; 
+    
+}
+.wrapper_zayavki{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper_zayavki div{
+    margin-bottom: 8px;
+    border-color: white;
+}
+button{
+    width: 416px;
+    height: 40px;
+    border-radius: 20px;
+    background: rgb(234, 204, 118);
+    border: 0;
+   
+
+}
+span{
+    color: rgb(11, 60, 50);
+    font-family: "Ubuntu";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: center;
+}

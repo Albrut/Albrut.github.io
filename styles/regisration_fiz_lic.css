@@ -14,6 +14,9 @@ body {
     justify-content: center;
     flex-direction: column;
 }
+form div input{
+    border: 0;
+}
 
 .logo img {
     width: 224px;
@@ -77,4 +80,5 @@ body {
 }
 .buttons input[type="submit"] {
     font-weight: bold;
+    border: 0px;
 }
