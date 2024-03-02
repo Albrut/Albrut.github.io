@@ -1,0 +1,211 @@
+*{
+    font-family: "Ubuntu";
+}
+.buy_vzr {
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 37px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+
+.container {
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.pay {
+    width: 408px;
+    height: 380px;
+    box-sizing: border-box;
+    border: 1px solid rgb(11, 60, 50);
+    border-radius: 10px;
+    background: rgb(11, 60, 50);
+}
+
+.input_form_field {
+    width: 160px;
+    height: 36px;
+    border-radius: 6px;
+    background: rgb(255, 255, 255);
+}
+
+.dates {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+
+.label_wrapper {
+    position: absolute;
+    position: absolute;
+    margin-top: 10px;
+    width: 98px;
+    height: 30px;
+    border-radius: 6px;
+    background: rgb(255, 255, 255);
+    color: rgb(141, 141, 141);
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.form_field_date label {
+    display: block;
+    width: 160px;
+    height: 26px;
+    border-radius: 6px;
+    background: rgb(255, 255, 255);
+    color: rgb(141, 141, 141);
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.tariff_chooser {
+    width: 165px;
+    height: 36px;
+    border-radius: 6px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tariff_chooser span {
+    color: rgb(141, 141, 141);
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+
+.tariff {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.tariff_chooser_button {
+    width: 24px;
+    height: 36px;
+    box-sizing: border-box;
+    border: 1px solid rgb(243, 244, 239);
+    border-radius: 0px 6px 6px 0px;
+    background: rgb(11, 60, 50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#arrow_down {
+    /* display: none; */
+}
+#arrow_up {
+    display: none;
+}
+#arrow_down_2 {
+    /* display: none; */
+}
+#arrow_up_2 {
+    display: none;
+}
+.tariffs {
+    width: 160px;
+    height: 76px;
+    border-radius: 6px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    display: none;
+    margin-top: 4px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.tariffs span {
+    position: relative;
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+    left: 8px;
+}
+
+.tariff_chooser_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+#tariffs_2 {
+    overflow-x: hidden;
+    width: auto; /* изменено значение свойства */
+    max-width: 160px; /* добавлено новое свойство */
+    height: auto; /* изменено значение свойства */
+    border-radius: 6px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column; /* изменено значение свойства */
+    justify-content: space-around; /* изменено значение свойства */
+    gap: 6px;
+    margin-top: 4px;
+    overflow-y: auto; /* изменено значение свойства */
+    display: none;
+}
+
+.tariff_link {
+    text-decoration: none;
+
+}
+.tariffs .tariff_link {
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.btn_save {
+    width: 127px;
+
+    height: 32px;
+    border-radius: 16px;
+    background: rgb(234, 204, 118);
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.submit_wrapper {
+    display: flex;
+    justify-content: center;
+}

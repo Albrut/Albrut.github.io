@@ -44,44 +44,73 @@
                 </div>
             </div>
             <div class="tariff">
-                <div class="tariff_chooser">
-                    <span>Тариф</span>
-                    <a href="" class="tariff_chooser_button_click" id="tariff_chooser_button_click">
-                        <div class="tariff_chooser_button">
-                            <svg id="arrow_up" width="14.828125" height="10.242645" viewBox="0 0 14.8281 10.2426"
-                                 fill="none"
-                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <desc>
-                                    Created with Pixso.
-                                </desc>
-                                <defs/>
-                                <path id="Vector 3" d="M1.41406 8.82843L7.41406 2.82843L13.4141 8.82843"
-                                      stroke="#EACC76"
-                                      stroke-opacity="1.000000" stroke-width="4.000000"/>
-                            </svg>
-                            <svg id="arrow_down" width="14.828125" height="10.242645" viewBox="0 0 14.8281 10.2426"
-                                 fill="none" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <desc>
-                                    Created with Pixso.
-                                </desc>
-                                <defs/>
-                                <path id="Vector 2" d="M13.4141 1.41422L7.41406 7.41422L1.41406 1.41422"
-                                      stroke="#EACC76" stroke-opacity="1.000000" stroke-width="4.000000"/>
-                            </svg>
-                        </div>
-                    </a>
-                </div>
-                <div class="tariffs" id="tariffs">
-<!--                    <div>-->
-<!--                        <a class="tariff_option" href=""><span class="tariff_name">Базовый</span></a>-->
-<!--                    </div>-->
-<!--                    <div>-->
-<!--                        <a class="tariff_option" href=""><span class="tariff_name">Оптимальный</span></a>-->
-<!--                    </div>-->
-<!--                    <div>-->
-<!--                        <a class="tariff_option" href=""><span class="tariff_name">VIP</span></a>-->
-<!--                    </div>-->
+                <div class="tariff_chooser_wrapper">
+                    <div class="tariff_chooser">
+                        <span>Тариф</span>
+                        <a href="" class="tariff_chooser_button_click" id="tariff_chooser_button_click">
+                            <div class="tariff_chooser_button">
+                                <svg id="arrow_up" width="14.828125" height="10.242645"
+                                     viewBox="0 0 14.8281 10.2426"
+                                     fill="none"
+                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs/>
+                                    <path id="Vector 3" d="M1.41406 8.82843L7.41406 2.82843L13.4141 8.82843"
+                                          stroke="#EACC76"
+                                          stroke-opacity="1.000000" stroke-width="4.000000"/>
+                                </svg>
+                                <svg id="arrow_down" width="14.828125" height="10.242645"
+                                     viewBox="0 0 14.8281 10.2426"
+                                     fill="none" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs/>
+                                    <path id="Vector 2" d="M13.4141 1.41422L7.41406 7.41422L1.41406 1.41422"
+                                          stroke="#EACC76" stroke-opacity="1.000000" stroke-width="4.000000"/>
+                                </svg>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="tariffs" id="tariffs">
+                    </div>
+
+                    <div class="tariff_chooser">
+                        <span>Тариф</span>
+                        <a href="" class="tariff_chooser_button_click" id="company_chooser_button_click">
+                            <div class="tariff_chooser_button">
+                                <svg id="arrow_up_company" width="14.828125" height="10.242645"
+                                     viewBox="0 0 14.8281 10.2426"
+                                     fill="none"
+                                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs/>
+                                    <path id="Vector 3" d="M1.41406 8.82843L7.41406 2.82843L13.4141 8.82843"
+                                          stroke="#EACC76"
+                                          stroke-opacity="1.000000" stroke-width="4.000000"/>
+                                </svg>
+                                <svg id="arrow_down_company" width="14.828125" height="10.242645"
+                                     viewBox="0 0 14.8281 10.2426"
+                                     fill="none" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs/>
+                                    <path id="Vector 2" d="M13.4141 1.41422L7.41406 7.41422L1.41406 1.41422"
+                                          stroke="#EACC76" stroke-opacity="1.000000" stroke-width="4.000000"/>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tariffs" id="companies">
+                    </div>
                 </div>
 
             </div>
@@ -95,7 +124,7 @@
                             <input type="submit" value="Загрузить форму Excel">
                         </div>
 
-                        <input type="file" class="upload_file" placeholder="Прикрепить">
+                        <input id="upload_file" type="file" class="upload_file" placeholder="Прикрепить">
                     </form>
                 </div>
                 <a href="" class="download_prepared_form">Скачать готовую форму Excel</a>
