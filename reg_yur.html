@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <link rel="stylesheet" href="css/reg_yur.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration of legal entities</title>
+</head>
+<body>
+    <div class="logo"> <!-- Лого -->
+        <p>ЛОГО</p>
+    </div>
+    <form action="#" method="post" id="form">
+        <div class="wrapper_for_blocks">
+            <div class="name_org"> <!-- Поля для организации--> 
+                <input type="text" name="name_orga" placeholder="Название организации" id="organisation_name">
+            </div>
+
+            <div class="code_okpo">
+                <input type="text" name="code_OKPO" placeholder="Код ОКПО" id="code_okpo">
+            </div>
+
+            <div class="regiter_number">
+                <input type="text" name="regiter_number" placeholder="Регистрационный номер" id="registration_number">
+            </div>
+            <div class="full_name_ceo">
+                <input type="text" name="full_name_ceo" placeholder="ФИО руководителя" id="supervisor_name">
+            </div>
+            <div class="position_ceo">
+                <input type="text" name="position_ceo" placeholder="Должность руководителя" id="supervisor_job">
+            </div>
+            <div class="full_name_dov_lico">
+                <input type="text" name="full_name_dov_lico" placeholder="ФИО доверенного лица" id="confidant_name">
+            </div>
+            <div class="yur_addres">
+                <input type="text" name="yur_addres" placeholder="Юридический адрес" id="yur_address">
+            </div>
+            <div class="fact_addres">
+                <input type="text" name="fact_addres" placeholder="Фактический адрес" id="fact_address">
+            </div>
+        </div>
+        <div class="buttons"> <!-- Кнопочки -->
+            <span><button type="submit ">Регистрация</button></span>
+        </div>
+    </form>
+
+    <script src="js/registration_yur.js"></script>
+</body>
+</html>
