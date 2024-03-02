@@ -1,0 +1,82 @@
+.nazvanie h1{
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 37px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Крестик */
+input[type="checkbox"]::before {
+    content: '\2715'; /* Юникод символ крестика */
+    display: inline-block;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: transparent; /* Изначально прозрачный */
+}
+
+/* Стили для отмеченного состояния */
+input[type="checkbox"].checked::before {
+    color: #ffffff; /* Цвет крестика при отмеченном состоянии */
+}
+.container {
+    display: flex;
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    align-items: center;
+    flex-direction: column; /* Устанавливаем направление элементов по вертикали */
+    box-sizing: border-box;
+    border: 1px solid rgb(11, 60, 50);
+    border-radius: 10px;
+    background: rgb(11, 60, 50);
+    width: 408px;
+    margin: auto;
+    color: #ffffff;
+    flex-wrap: wrap; /* Добавил для переноса .wrapper на новую строку */
+    padding: 0 40px; /* Добавил одинаковые отступы справа и слева для всех элементов внутри контейнера */
+}
+
+
+
+.container form{
+    padding-top: 40px;
+}
+
+.container .wrapper{
+    display: flex;
+    align-items: center; /* Выравниваем элементы по вертикали */
+    margin-bottom: 8px; /* Добавляем отступ снизу */
+}
+.polya {
+    margin-top: 8px; /* Добавляем отступ сверху */
+    display: flex;
+    justify-content: center; /* Центрируем .polya по горизонтали */
+}
+.polya div input{
+    /* Rectangle 11 */
+    width: 328px;
+    height: 36px;
+    border-radius: 6px;
+    background: rgb(255, 255, 255);
+}
+
+
+.model {
+    position: relative;
+    left: 25px;
+}

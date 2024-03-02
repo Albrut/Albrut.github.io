@@ -22,7 +22,8 @@
                 <input type="text" placeholder="Место рождения" class="form_field">
             </div>
             <div class="person_info">
-                <input type="text" placeholder="Дата рождения" class="form_field">
+                <!-- Используем поле ввода типа text для возможности кастомизации -->
+                <input type="text" class="form_field" id="date_field" placeholder="date of birth">
             </div>
             <div class="person_info">
                 <input type="text" placeholder="Серия и номер паспорта" class="form_field">
@@ -45,9 +46,21 @@
             <div class="buttons">
                 <input type="submit" value="Регистрация" id="button_registration" class="button">
             </div>
-
         </form>
     </div>
 </div>
+<script>
+    var dateField = document.getElementById("date_field");
+
+    // Функция, вызывающая календарь при клике на поле ввода
+    dateField.addEventListener("click", function() {
+        this.type = "date"; // Изменяем тип поля ввода на "date"
+    });
+
+    // Функция, запрещающая ввод через клавиатуру
+    dateField.addEventListener("keydown", function(event) {
+        event.preventDefault();
+    });
+</script>
 </body>
 </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/auto_strahavanie.css">
+    <title></title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img src="static/logo.jpg" alt="logo" />
+            </div>
+            <ul class="navbar_buttons">
+                <li class="navbar_button">
+                    <a href="dms_rules.html">О ДМС</a>
+                </li>
+                <li class="navbar_button">
+                    <a href="services.html">Услуги</a>
+                </li>
+                <li class="navbar_button">
+                    <a href="">Клининки</a>
+                </li>
+                <li class="navbar_button">
+                    <a href="profile.html">Профиль</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="nazvanie">
+        <h1>Автострахование</h1>
+    </div>
+
+    <div class="container">
+        <form action="#">
+            <div class="wrapper">
+                <input type="checkbox" id="checkbox_sobstven" name="checkbox_sobstven"
+                    onclick="toggleCheckbox('checkbox_sobstven')">
+                <label for="checkbox_sobstven">Страхователь является собственником</label>
+            </div>
+            <div class="wrapper">
+                <input type="checkbox" id="checkbox_drugie_sk" name="checkbox_drugie_sk"
+                onclick="toggleCheckbox('checkbox_drugie_sk')">
+            <label for="checkbox_drugie_sk">Застраховано в других СК</label>
+            </div>
+        </form>
+
+        <div class="polya">
+            <div class="model">
+                <input type="text">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCheckbox(id) {
+            var checkbox = document.getElementById(id);
+            checkbox.classList.toggle("checked");
+        }
+    </script>
+
+</body>
+
+</html>
