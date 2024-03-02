@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auto_strahavanie.css">
+    <link rel="stylesheet" type="text/css"
+          href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <title></title>
+</head>
+
+<body>
+<nav>
+    <div class="navbar">
+        <div class="logo">
+            <img src="static/logo.jpg" alt="logo"/>
+        </div>
+        <ul class="navbar_buttons">
+            <li class="navbar_button">
+                <a href="dms_rules.html">О ДМС</a>
+            </li>
+            <li class="navbar_button">
+                <a href="services.html">Услуги</a>
+            </li>
+            <li class="navbar_button">
+                <a href="">Клининки</a>
+            </li>
+            <li class="navbar_button">
+                <a href="profile.html">Профиль</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="nazvanie">
+    <h1>Автострахование</h1>
+</div>
+
+<div class="container">
+    <form action="#" id="insurance_form">
+        <div class="wrapper">
+            <input type="checkbox" id="checkbox_sobstven" name="checkbox_sobstven" onclick="toggleCheckbox('checkbox_sobstven')">
+            <label for="checkbox_sobstven">Страхователь является собственником</label>
+        </div>
+        <div class="wrapper">
+            <input type="checkbox" id="checkbox_drugie_sk" name="checkbox_drugie_sk" onclick="toggleCheckbox('checkbox_drugie_sk')">
+            <label for="checkbox_drugie_sk">Застраховано в других СК</label>
+        </div>
+
+        <div class="polya">
+            <div class="model">
+                <input id="car_mark" type="text" placeholder="Марка">
+            </div>
+        </div>
+        <div class="polya">
+            <div class="model">
+                <input id="car_model" type="text" placeholder="Модель">
+            </div>
+        </div>
+        <div class="polya">
+            <div class="model" id="god_vupyska">
+                <input id="car_year" type="date" placeholder="Год выпуска">
+            </div>
+        </div>
+        <div class="polya" id="dates">
+        <span>
+            <input id="start_date" type="date" placeholder="Дата начала">
+        </span>
+            <span id="konec_data">
+            <input id="end_date" type="date" placeholder="Дата конца">
+        </span>
+        </div>
+        <div class="tariff">
+            <div class="tariff_chooser">
+                <span>Тариф</span>
+                <a href="" class="tariff_chooser_button_click" id="tariff_chooser_button_click">
+                    <div class="tariff_chooser_button">
+                        <svg id="arrow_up" width="14.828125" height="10.242645" viewBox="0 0 14.8281 10.2426"
+                             fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                Created with Pixso.
+                            </desc>
+                            <defs/>
+                            <path id="Vector 3" d="M1.41406 8.82843L7.41406 2.82843L13.4141 8.82843" stroke="#EACC76"
+                                  stroke-opacity="1.000000" stroke-width="4.000000"/>
+                        </svg>
+                        <svg id="arrow_down" width="14.828125" height="10.242645" viewBox="0 0 14.8281 10.2426"
+                             fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                Created with Pixso.
+                            </desc>
+                            <defs/>
+                            <path id="Vector 2" d="M13.4141 1.41422L7.41406 7.41422L1.41406 1.41422" stroke="#EACC76"
+                                  stroke-opacity="1.000000" stroke-width="4.000000"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="tariffs" id="tariffs">
+                <span class="tariff_name">Обычный</span>
+                <span class="tariff_name">Согласно доверенностей</span>
+                <span class="tariff_name">Все</span>
+            </div>
+        </div>
+        <div class="polya" id="territoriya_strahovaniya">
+            <div class="model">
+                <input id="insurance_territory" type="text" placeholder="Территория страхования">
+            </div>
+            <div class="buttons">
+                <button type="submit">Регистрация</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="/js/auto_strahovanie.js">
+</script>
+
+</body>
+
+</html>
