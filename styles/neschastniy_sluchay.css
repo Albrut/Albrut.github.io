@@ -56,12 +56,10 @@ input[type="checkbox"].checked::before {
     color: #ffffff;
     /* flex-wrap: wrap; */
     /* Добавил для переноса .wrapper на новую строку */
-    padding: 0 40px;
+    /* padding: 0 40px; */
     /* Добавил одинаковые отступы справа и слева для всех элементов внутри контейнера */
 }
-
-
-
+/* 
 .container form {
     padding-top: 40px;
 }
@@ -70,41 +68,43 @@ input[type="checkbox"].checked::before {
     display: flex;
     align-items: center;
     /* Выравниваем элементы по вертикали */
-    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
     /* Добавляем отступ снизу */
-}
+/* } */
 
 .polya {
-    margin-top: 8px;
-    /* Добавляем отступ сверху */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Центрируем .polya по горизонтали */
-    /* flex-direction: column; */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 15px; /* Add top margin */
+    margin-bottom: 8px;
 }
 
 .polya div input {
-    /* Rectangle 11 */
-    width: 300px;
+    width: 310px; /* Adjust width as needed */
     height: 36px;
     border-radius: 6px;
     background: rgb(255, 255, 255);
+    margin: 0 10px; /* Add some horizontal margin for spacing */
+    position: relative;
+    left: 2%;
 }
 
-
+/* 
 .model {
     position: relative;
     left: 10px;
-}
+} */
+
 
 #dates {
-    margin-right: -10px;
-    /* Смещаем влево */
+    height: 20px;
+    margin-top: 40px; 
     display: flex;
     align-items: center;
-    /* Выравниваем элементы по вертикали */
+    
 }
+
 
 #god_vupyska input {
     position: relative;
@@ -112,7 +112,7 @@ input[type="checkbox"].checked::before {
     right: 50%;
 }
 
-#dates input {
+ #dates input {
     position: relative;
     width: 150px;
     height: 36px;
@@ -120,13 +120,12 @@ input[type="checkbox"].checked::before {
     background: rgb(255, 255, 255);
     right: -5px;
     display: flex;
-    flex-direction: row;
-}
-
+    flex-direction: row; 
+} 
 #konec_data {
     position: relative;
     left: 5px;
-}
+} 
 
 .tariff_chooser {
     width: 160px;
@@ -148,7 +147,6 @@ input[type="checkbox"].checked::before {
     letter-spacing: 0%;
     text-align: left;
 }
-
 
 .tariff {
     position: relative;
@@ -233,7 +231,7 @@ input[type="checkbox"].checked::before {
     /* Задаем фиксированную ширину кнопки */
     height: 32px;
     font-size: 16px;
-    font-weight: 700px;
+    font-weight: 700;
     border-radius: 12px;
     background: #EACC76;
     line-height: 18.38px;
@@ -250,4 +248,19 @@ input[type="checkbox"].checked::before {
 .buttons button[type="submit"] {
     font-weight: bold;
     border: 0;
+} 
+button {
+    width: 228px;
+    height: 32px;
+    border-radius: 20px;
+    background: rgb(234, 204, 118);
+    border: 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: center;
 }
