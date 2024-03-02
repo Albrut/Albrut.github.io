@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Elements</title>
+</head>
+<body>
+
+<div id="jsonElements"></div>
+
+<script>
+    // Ваш JSON
+    var jsonData = [
+        { "id": 1, "name": "Элемент 1" },
+        { "id": 2, "name": "Элемент 2" },
+        { "id": 3, "name": "Элемент 3" }
+    ];
+
+    // Получаем контейнер, куда будем добавлять элементы
+    var container = document.getElementById("jsonElements");
+
+    // Проходимся по каждому элементу JSON
+    jsonData.forEach(function(item) {
+        // Создаем элемент div для каждого элемента JSON
+        var div = document.createElement("div");
+        div.textContent = item.name; // Устанавливаем текст элемента
+        div.classList.add("jsonElement"); // Добавляем класс для стилизации или идентификации
+
+        // Привязываем обработчик события для клика на элемент
+        div.addEventListener("click", function() {
+            alert("Вы нажали на " + item.name); // Действие по нажатию, здесь пример - алерт с именем элемента
+        });
+
+        // Добавляем созданный элемент в контейнер
+        container.appendChild(div);
+    });
+</script>
+
+</body>
+</html>

@@ -37,16 +37,10 @@
         <form action="" class="pay_form">
             <div class="dates">
                 <div class="form_field_date">
-                    <div class="label_wrapper">
-                        <label for="input_date">Дата начала</label>
-                    </div>
-                    <input type="date" placeholder="Дата начала" class="input_form_field" id="input_date">
+                    <input type="date" placeholder="Дата начала" class="input_form_field" id="input_date_begin">
                 </div>
                 <div class="form_field_date">
-                    <div class="label_wrapper">
-                        <label for="input_date">Дата начала</label>
-                    </div>
-                    <input type="date" placeholder="Дата начала" class="input_form_field" id="input_date">
+                    <input type="date" placeholder="Дата начала" class="input_form_field" id="input_date_expire">
                 </div>
             </div>
             <div class="tariff">
@@ -79,10 +73,17 @@
                     </a>
                 </div>
                 <div class="tariffs" id="tariffs">
-                    <span class="tariff_name">Базовый</span>
-                    <span class="tariff_name">Оптимальный</span>
-                    <span class="tariff_name">VIP</span>
+<!--                    <div>-->
+<!--                        <a class="tariff_option" href=""><span class="tariff_name">Базовый</span></a>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <a class="tariff_option" href=""><span class="tariff_name">Оптимальный</span></a>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <a class="tariff_option" href=""><span class="tariff_name">VIP</span></a>-->
+<!--                    </div>-->
                 </div>
+
             </div>
 
             <div class="add_employee">
@@ -94,7 +95,7 @@
                             <input type="submit" value="Загрузить форму Excel">
                         </div>
 
-                            <input type="file" class="upload_file" placeholder="Прикрепить">
+                        <input type="file" class="upload_file" placeholder="Прикрепить">
                     </form>
                 </div>
                 <a href="" class="download_prepared_form">Скачать готовую форму Excel</a>

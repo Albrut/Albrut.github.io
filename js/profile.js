@@ -2,8 +2,9 @@ var responseUnprocessedContent = [];
 var responseProcessedContent = [];
 
 const accessToken = localStorage.getItem("accessToken");
+console.log(accessToken);
 
-fetch("http://212.112.103.137:6457/api/profile/", {
+fetch("http://35.192.170.245:8000/api/profile/", {
     method: "GET",
     headers: {
         "Authorization": `Bearer ${accessToken}`
@@ -19,92 +20,93 @@ fetch("http://212.112.103.137:6457/api/profile/", {
         inn.innerHTML = data.user.inn;
     })
     .catch(error => {
-        console.error("Error:", error);
+        // console.error("Error:", error);
+        console.log("huy");
     });
 
-fetch("http://212.112.103.137:6457/api/my_payments/", {
-    method: "GET",
-    headers: {
-        "Authorization": `Bearer ${accessToken}`
-    }
-})
-    .then(response => response.json())
-    .then(data => {
-        var payments = data;
-        var responsesContainer = document.querySelector(".responses");
-
-        console.log(payments);
-        // Проходимся по каждому элементу в массиве данных
-        payments.forEach(function (request) {
-            if (request.processed == true) {
-                // Создаем новый элемент response_processed
-                var responseProcessed = document.createElement("div");
-                responseProcessed.classList.add("response_processed");
-                responseProcessed.id = "response_processed_content";
-
-                // Создаем и заполняем спаны для каждого свойства заявки
-                var idSpan = document.createElement("span");
-                idSpan.classList.add("id");
-                idSpan.textContent = request.id;
-
-                var serviceSpan = document.createElement("span");
-                serviceSpan.classList.add("service");
-                serviceSpan.textContent = request.service;
-
-                var askedSumSpan = document.createElement("span");
-                askedSumSpan.classList.add("asked_sum");
-                askedSumSpan.textContent = request.paymentSumm;
-
-                var approvedSumSpan = document.createElement("span");
-                approvedSumSpan.classList.add("approved_sum");
-                approvedSumSpan.textContent = request.finalSumm;
-
-                // Добавляем спаны в элемент response_processed
-                responseProcessed.appendChild(idSpan);
-                responseProcessed.appendChild(serviceSpan);
-                responseProcessed.appendChild(askedSumSpan);
-                responseProcessed.appendChild(approvedSumSpan);
-
-                // Добавляем элемент response_processed в контейнер responsesContainer
-                responsesContainer.appendChild(responseProcessed);
-
-                responseProcessedContent = document.querySelectorAll("#response_processed_content");
-            } else if (request.processed == false) {
-                // Создаем новый элемент response_unprocessed
-                var responseUnprocessed = document.createElement("div");
-                responseUnprocessed.classList.add("response_unprocessed");
-                responseUnprocessed.id = "response_unprocessed_content";
-
-                // Создаем и заполняем спаны для каждого свойства заявки
-                var idSpan = document.createElement("span");
-                idSpan.classList.add("id");
-                idSpan.textContent = request.id;
-
-                var serviceSpan = document.createElement("span");
-                serviceSpan.classList.add("service");
-                serviceSpan.textContent = request.service;
-
-                var askedSumSpan = document.createElement("span");
-                askedSumSpan.classList.add("asked_sum_unprocessed");
-                askedSumSpan.textContent = request.paymentSumm;
-
-                // Добавляем спаны в элемент response_unprocessed
-                responseUnprocessed.appendChild(idSpan);
-                responseUnprocessed.appendChild(serviceSpan);
-                responseUnprocessed.appendChild(askedSumSpan);
-
-                // Добавляем элемент response_unprocessed в контейнер responsesContainer
-                responsesContainer.appendChild(responseUnprocessed);
-                responseUnprocessedContent = document.querySelectorAll("#response_unprocessed_content");
-                responseUnprocessedContent.forEach(function (element) {
-                    element.style.display = "none";
-                });
-            }
-        });
-    })
-    .catch(error => {
-        console.error("Error:", error);
-    });
+// fetch("http://212.112.103.137:6457/api/my_payments/", {
+//     method: "GET",
+//     headers: {
+//         "Authorization": `Bearer ${accessToken}`
+//     }
+// })
+//     .then(response => response.json())
+//     .then(data => {
+//         var payments = data;
+//         var responsesContainer = document.querySelector(".responses");
+//
+//         console.log(payments);
+//         // Проходимся по каждому элементу в массиве данных
+//         payments.forEach(function (request) {
+//             if (request.processed == true) {
+//                 // Создаем новый элемент response_processed
+//                 var responseProcessed = document.createElement("div");
+//                 responseProcessed.classList.add("response_processed");
+//                 responseProcessed.id = "response_processed_content";
+//
+//                 // Создаем и заполняем спаны для каждого свойства заявки
+//                 var idSpan = document.createElement("span");
+//                 idSpan.classList.add("id");
+//                 idSpan.textContent = request.id;
+//
+//                 var serviceSpan = document.createElement("span");
+//                 serviceSpan.classList.add("service");
+//                 serviceSpan.textContent = request.service;
+//
+//                 var askedSumSpan = document.createElement("span");
+//                 askedSumSpan.classList.add("asked_sum");
+//                 askedSumSpan.textContent = request.paymentSumm;
+//
+//                 var approvedSumSpan = document.createElement("span");
+//                 approvedSumSpan.classList.add("approved_sum");
+//                 approvedSumSpan.textContent = request.finalSumm;
+//
+//                 // Добавляем спаны в элемент response_processed
+//                 responseProcessed.appendChild(idSpan);
+//                 responseProcessed.appendChild(serviceSpan);
+//                 responseProcessed.appendChild(askedSumSpan);
+//                 responseProcessed.appendChild(approvedSumSpan);
+//
+//                 // Добавляем элемент response_processed в контейнер responsesContainer
+//                 responsesContainer.appendChild(responseProcessed);
+//
+//                 responseProcessedContent = document.querySelectorAll("#response_processed_content");
+//             } else if (request.processed == false) {
+//                 // Создаем новый элемент response_unprocessed
+//                 var responseUnprocessed = document.createElement("div");
+//                 responseUnprocessed.classList.add("response_unprocessed");
+//                 responseUnprocessed.id = "response_unprocessed_content";
+//
+//                 // Создаем и заполняем спаны для каждого свойства заявки
+//                 var idSpan = document.createElement("span");
+//                 idSpan.classList.add("id");
+//                 idSpan.textContent = request.id;
+//
+//                 var serviceSpan = document.createElement("span");
+//                 serviceSpan.classList.add("service");
+//                 serviceSpan.textContent = request.service;
+//
+//                 var askedSumSpan = document.createElement("span");
+//                 askedSumSpan.classList.add("asked_sum_unprocessed");
+//                 askedSumSpan.textContent = request.paymentSumm;
+//
+//                 // Добавляем спаны в элемент response_unprocessed
+//                 responseUnprocessed.appendChild(idSpan);
+//                 responseUnprocessed.appendChild(serviceSpan);
+//                 responseUnprocessed.appendChild(askedSumSpan);
+//
+//                 // Добавляем элемент response_unprocessed в контейнер responsesContainer
+//                 responsesContainer.appendChild(responseUnprocessed);
+//                 responseUnprocessedContent = document.querySelectorAll("#response_unprocessed_content");
+//                 responseUnprocessedContent.forEach(function (element) {
+//                     element.style.display = "none";
+//                 });
+//             }
+//         });
+//     })
+//     .catch(error => {
+//         console.error("Error:", error);
+//     });
 
 
 var responseProcessed = document.getElementById("response_processed");

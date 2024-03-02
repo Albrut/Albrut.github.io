@@ -13,7 +13,7 @@ form.addEventListener("submit", function (event) {
 
     var jsonData = JSON.stringify(formData);
 
-    fetch("http://212.112.103.137:6457/api/token/", {
+    fetch("http://35.192.170.245:8000/api/token/", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

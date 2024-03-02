@@ -129,6 +129,7 @@
     gap: 6px;
     display: none;
     margin-top: 4px;
+    overflow-x: scroll;
 }
 .tariffs span {
     position: relative;
@@ -297,5 +298,14 @@
 }
 
 .upload_file::file-selector-button {
+    display: none;
+}
+
+
+.tariff_option {
+    text-decoration: none;
+}
+
+.hidden{
     display: none;
 }
