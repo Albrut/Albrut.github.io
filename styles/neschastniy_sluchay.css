@@ -77,7 +77,7 @@ input[type="checkbox"].checked::before {
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     margin-top: 15px; /* Add top margin */
-    margin-bottom: 8px;
+    margin-bottom: ;
 }
 
 .polya div input {
