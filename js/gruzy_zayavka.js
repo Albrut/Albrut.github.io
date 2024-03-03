@@ -12,8 +12,7 @@ form.addEventListener('submit', function (event) {
     const data = {
         "accidentPlace": place,
         "image": file, // Если нужно, вы можете добавить путь к файлу, но это может быть небезопасно
-        "policy_num": 1,
-        "is_valid": true
+        "policy_num": 1
     };
 
     // Отправляем данные на сервер
@@ -28,7 +27,7 @@ function sendDataToServer(data) {
     fetch('http://35.192.170.245:8000/api/payment/cargo/request/', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'multipart-form/data',
             "Authorization": "Bearer " + localStorage.getItem("accessToken")
         },
         body: jsonData
