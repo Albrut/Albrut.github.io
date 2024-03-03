@@ -4,89 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/navbar.css">
-    <link rel="stylesheet" href="../styles/cargo_insurrance.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cargo_insurrance.css">
     <title></title>
 </head>
 
 <body>
-    <nav>
-        <div class="navbar">
-            <div class="logo">
-                <img src="static/logo.jpg" alt="logo" />
-            </div>
-            <ul class="navbar_buttons">
-                <li class="navbar_button">
-                    <a href="dms_rules.html">О ДМС</a>
-                </li>
-                <li class="navbar_button">
-                    <a href="services.html">Услуги</a>
-                </li>
-                <li class="navbar_button">
-                    <a href="">Клининки</a>
-                </li>
-                <li class="navbar_button">
-                    <a href="profile.html">Профиль</a>
-                </li>
-            </ul>
+<nav>
+    <div class="navbar">
+        <div class="logo">
+            <img src="static/logo.jpg" alt="logo"/>
         </div>
-    </nav>
-    <div class="nazvanie">
-        <h1>Грузы</h1>
+        <ul class="navbar_buttons">
+            <li class="navbar_button">
+                <a href="dms_rules.html">О ДМС</a>
+            </li>
+            <li class="navbar_button">
+                <a href="services.html">Услуги</a>
+            </li>
+            <li class="navbar_button">
+                <a href="">Клининки</a>
+            </li>
+            <li class="navbar_button">
+                <a href="profile.html">Профиль</a>
+            </li>
+        </ul>
     </div>
+</nav>
+<div class="nazvanie">
+    <h1>Грузы</h1>
+</div>
 
-    <div class="container">
+<div class="container">
 
+    <form action="" class="cargo">
         <div class="polya">
             <div class="model">
-                <input id="up" value="Наименование груза">
+                <input id="up" placeholder="Наименование груза">
             </div>
         </div>
 
         <div class="form_wrapper">
-            <form action="#">
                 <div class="wrapper">
                     <input type="checkbox" id="checkbox_sobstven" name="checkbox_sobstven"
-                        onclick="toggleCheckbox('checkbox_sobstven')">
+                           onclick="toggleCheckbox('checkbox_sobstven')">
                     <label for="checkbox_sobstven">Груз новый</label>
                 </div>
 
                 <div class="wrapper">
                     <input type="checkbox" id="checkbox_drugie_sk" name="checkbox_drugie_sk"
-                        onclick="toggleCheckbox('checkbox_drugie_sk')">
+                           onclick="toggleCheckbox('checkbox_drugie_sk')">
                     <label for="checkbox_drugie_sk">Груз хрупкий</label>
                 </div>
-            </form>
         </div>
 
         <div class="polya">
             <div class="gabarity">
-                <input id="gabarit" placeholder="Длинна">
-                <input id="gabarit" placeholder="Ширина">
-                <input id="gabarit" placeholder="Высота">
+                <input id="gabarit" class="gabaritLength" placeholder="Длинна">
+                <input id="gabarit" class="gabaritWidth" placeholder="Ширина">
+                <input id="gabarit" class="gabaritHeight" placeholder="Высота">
             </div>
         </div>
 
         <div class="polya">
             <div class="model">
-                <input type="text" value="Объем / Вес груза">
+                <input type="text" id="volumeWeight" placeholder="Объем / Вес груза">
             </div>
         </div>
 
         <div class="polya">
             <div class="gabarity">
-                <input id="cargo" placeholder="Кол-во едениц груза">
-                <input id="cargo" placeholder="Кол-во грузовых мест">
+                <input id="cargo" class="cargoPlaces" placeholder="Кол-во едениц груза">
+                <input id="cargo" class="cargoUnits" placeholder="Кол-во грузовых мест">
             </div>
         </div>
 
         <div class="polya">
             <div class="model">
-                <input type="text" value="Гос. номер тягача">
-                <input type="text" value="Гос. номер прицепа">
-                <input type="text" value="Пункт отправления">
-                <input type="text" value="Пункт назначения">
-                <input type="text" value="Страховая сумма">
+                <input type="text" id="tractorNumber" placeholder="Гос. номер тягача">
+                <input type="text" id="trailerNumber" placeholder="Гос. номер прицепа">
+                <input type="text" id="departurePoint" placeholder="Пункт отправления">
+                <input type="text" id="destinationPoint" placeholder="Пункт назначения">
+                <input type="text" id="insuranceAmount" placeholder="Страховая сумма">
             </div>
         </div>
 
@@ -95,28 +94,31 @@
                 <div class="label_wrapper">
                     <label for="input_date">Дата начала</label>
                 </div>
-                <input type="date" placeholder="Дата начала" class="input_form_field" id="input_date">
+                <input type="date" placeholder="Дата начала" class="input_form_field" id="startDate">
             </div>
             <div class="form_field_date">
                 <div class="label_wrapper">
                     <label for="input_date">Дата начала</label>
                 </div>
-                <input type="date" placeholder="Дата начала" class="input_form_field" id="input_date">
+                <input type="date" placeholder="Дата начала" class="input_form_field" id="endDate">
             </div>
-            
+
         </div>
         <div class="buttons"> <!-- Кнопочки -->
-                <button type="submit">Сохранить</button>
-            </div>
-    </div>
+<!--            <button type="submit">Сохранить</button>-->
+            <input type="submit" value="nigga">
+        </div>
+    </form>
+</div>
 
-    <script>
-        function toggleCheckbox(id) {
-            var checkbox = document.getElementById(id);
-            checkbox.classList.toggle("checked");
-        }
-    </script>
+<script>
+    function toggleCheckbox(id) {
+        var checkbox = document.getElementById(id);
+        checkbox.classList.toggle("checked");
+    }
+</script>
 
+<script src="js/cargo_insurance.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/payment_request_user2.css">
+</head>
+
+<body>
+<nav>
+    <div class="navbar">
+        <div class="logo">
+            <img src="static/logo.jpg" alt="logo" />
+        </div>
+        <ul class="navbar_buttons">
+            <li class="navbar_button">
+                <a href="dms_rules.html">О ДМС</a>
+            </li>
+            <li class="navbar_button">
+                <a href="services.html">Услуги</a>
+            </li>
+            <li class="navbar_button">
+                <a href="">Клининки</a>
+            </li>
+            <li class="navbar_button">
+                <a href="profile.html">Профиль</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="external_wrapper">
+    <div class="container" id="container">
+        <h1 class="payment_header">Онлайн заявка на выплату</h1>
+        <div class="block">
+            <form action="http://212.112.103.137:6457/api/payment/add/" class="form_payment" id="payment_form" method="post">
+                <input type="text" placeholder="Услуга" class="input_price" id="service_name">
+                <input type="text" name="paymentSumm" placeholder="Сумма выплат" class="input_price" id="payment_sum" required>
+
+                <div class="attach">
+                    <div class="input_attach"><span>Мед. документы</span></div>
+                    <input type="file" class="upload_file" placeholder="Прикрепить" id="med_documents" required>
+                </div>
+                <div class="attach">
+                    <div class="input_attach"><span>Документы на выезд</span></div>
+                    <input type="file" class="upload_file" placeholder="Прикрепить" id="departure_documents" required>
+                </div>
+                <div class="attach">
+                    <div class="input_attach"><span>Чеки</span></div>
+                    <input type="file" class="upload_file" placeholder="Прикрепить" id="invoice">
+                </div>
+
+                <div class="submit">
+                    <input type="submit" value="Отправить">
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="js/payment_request_user2.js"></script>
+</body>
+
+</html>
