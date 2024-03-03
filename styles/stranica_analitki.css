@@ -1,0 +1,72 @@
+.nazvanie h1 {
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 37px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* чтобы содержимое дополнительного div начиналось с верха */
+    width: 1052px;
+    margin: 0 auto; /* Добавляем автоматические отступы по бокам для центрирования */
+}
+.tablica {
+    width: 1052px;
+    margin: 0 auto; /* Добавляем автоматические отступы по бокам для центрирования */
+}
+
+.oglavlenie_tablicy {
+    width: 1052px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+}
+
+.oglavlenie_tablicy div {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.oglavlenie_tablicy div:first-child {
+    border-left: none;
+}
+
+.oglavlenie_tablicy div:last-child {
+    border-right: none;
+}
+
+.telo_tablicy {
+    width: 1052px;
+    height: 500px;
+    border: 1px solid black; /* Border for the table body */
+    margin-top: 0; /* Добавляем небольшой верхний отступ для разделения тела таблицы и заголовка */
+    overflow: scroll;
+}
+.additional-div {
+    width: 200px; /* ширина дополнительного div */
+    /* другие стили для вашего дополнительного div */
+}
+
+input[type="radio"] {
+    display: none; /* скрываем радиокнопки */
+}
+
+label {
+    display: inline-block; /* размещаем метки на одной строке */
+    cursor: pointer; /* меняем курсор при наведении на метку */
+    padding: 20px; /* добавляем отступы вокруг метки */
+}
+
+input[type="radio"]:checked + label {
+    background-color: lightgray; /* изменяем цвет фона выбранной метки */
+}
+
+
