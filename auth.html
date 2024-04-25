@@ -2,48 +2,53 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <title>Login</title>
-    <link rel="stylesheet" href="css/auth.css"/>
+    <link rel="stylesheet" href="css/auth.css" />
 </head>
 
 <body>
-<div class="external_wrapper">
-    <div class="container" id="container">
-        <div class="registration" id="registration">
-            <img class="registration_logo" src="https://media.wired.com/photos/5a55457ef41e4c2cd9ee6cb5/master/w_2560%2Cc_limit/Doggo-TopArt-104685145.jpg"
-                 alt="logo"/>
-            <div class="registration_form">
-                <form action="" id="form">
-                    <div class="form_field">
-                        <input type="text" id="input_email" placeholder="email" required/>
-                    </div>
+    <div class="external_wrapper">
+        <div class="container" id="container">
+            <div class="registration" id="registration">
+                <img class="registration_logo"
+                    src="https://media.wired.com/photos/5a55457ef41e4c2cd9ee6cb5/master/w_2560%2Cc_limit/Doggo-TopArt-104685145.jpg"
+                    alt="logo" />
+                <div class="registration_form">
+                    <form action="" id="form">
+                        <div class="form_field">
+                            <input type="text" id="input_email" placeholder="email" required />
+                        </div>
 
-                    <div class="form_field">
-                        <input type="text" id="input_inn" placeholder="ИНН" required/>
-                    </div>
+                        <div class="form_field">
+                            <input type="text" id="input_inn" placeholder="ИНН" required />
+                        </div>
 
-                    <div class="form_field">
-                        <input type="text" id="input_login" placeholder="Имя пользователя" required/>
-                    </div>
+                        <div class="form_field">
+                            <input type="text" id="input_login" placeholder="Имя пользователя" required />
+                        </div>
 
-                    <div class="form_field">
-                        <input type="password" id="input_password1" placeholder="Пароль 1" required/>
-                    </div>
-                    <div class="form_field">
-                        <input type="password" id="input_password2" placeholder="Пароль 2" required/>
-                    </div>
+                        <div class="form_field">
+                            <input type="password" id="input_password1" placeholder="Пароль 1" required />
+                        </div>
+                        <div class="form_field">
+                            <input type="password" id="input_password2" placeholder="Пароль 2" required />
+                        </div>
 
-                    <input type="submit" class="btn" value="Далее"/>
-                </form>
+                        <div class="form_field">
+                            <input type="text" id="account_number" placeholder="Номер счета" required />
+                        </div>
+
+                        <input type="submit" class="btn" value="Далее" />
+                    </form>
+                </div>
             </div>
+
+
         </div>
 
-
     </div>
-
-</div>
-<script src="js/auth.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 
 </html>

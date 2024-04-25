@@ -2,9 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Companies</title>
+    <link rel="stylesheet" href="css/company_info.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <span>index</span>
+<nav>
+    <div class="navbar">
+        <div class="logo">
+            <img src="static/logo.jpg" alt="logo"/>
+        </div>
+        <ul class="navbar_buttons">
+            <li class="navbar_button">
+                <a href="pokupka_polisov.html">Полисы</a>
+            </li>
+            <li class="navbar_button">
+                <a href="dms_rules.html">О нас</a>
+            </li>
+            <li class="navbar_button">
+                <a href="zayavki.html">Выплаты</a>
+            </li>
+            <li class="navbar_button">
+                <a href="login2.html">Профиль</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container">
+    <a href="" class="companies_click" id="companies_click">
+        <div class="companies">
+            <div class="company_name_wrapper">
+                <span class="company_name">Имя страховой компании</span>
+                <div class="arrow">
+                    <svg id="arrow_up" width="14.828125" height="10.242645" viewBox="0 0 14.8281 10.2426" fill="none"
+                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                            Created with Pixso.
+                        </desc>
+                        <defs/>
+                        <path id="Vector 3" d="M1.41406 8.82843L7.41406 2.82843L13.4141 8.82843" stroke="#EACC76"
+                              stroke-opacity="1.000000" stroke-width="4.000000"/>
+                    </svg>
+                    <svg id="arrow_down" width="14.828125" height="10.242645" viewBox="0 0 14.8281 10.2426" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                            Created with Pixso.
+                        </desc>
+                        <defs/>
+                        <path id="Vector 2" d="M13.4141 1.41422L7.41406 7.41422L1.41406 1.41422" stroke="#EACC76" stroke-opacity="1.000000" stroke-width="4.000000"/>
+                    </svg>
+
+                </div>
+            </div>
+        </div>
+    </a>
+    <div class="company_details" id="company_details">
+        <div class="company_properties_wrapper">
+            <div class="company_image">
+                <img src="https://masterpiecer-images.s3.yandex.net/5fa60c62218343e:upscaled" alt="">
+            </div>
+            <div class="company_properties">
+                <span class="company_properties_text">Почта: </span>
+                <span class="company_properties_text">Адрес: </span>
+                <span class="company_properties_text">О компании: </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/company_info.js"></script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+auth - first login stage
+reg_yur - second stage if the person is yur face. (second page in figma)
+registration - second stage if the person is physical face (third page in figma)
+profile - profile
+dms_rules - about the company
+zayavki - list of possible requests
+company_info = info about an insurance company
+pokupka_polisov - list of possible policies
+vzr - dms buy
+foreign - vzr buy
+auto_strahovanie - auto insurance
+cargo - грузы
