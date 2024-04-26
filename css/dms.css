@@ -1,6 +1,7 @@
-*{
+* {
     font-family: "Ubuntu";
 }
+
 .buy_vzr {
     color: rgb(11, 60, 50);
     font-family: Ubuntu;
@@ -22,7 +23,8 @@
 
 .pay {
     width: 408px;
-    height: 380px;
+    min-height: 380px;
+    height: fit-content;
     box-sizing: border-box;
     border: 1px solid rgb(11, 60, 50);
     border-radius: 10px;
@@ -118,18 +120,23 @@
     justify-content: center;
     align-items: center;
 }
+
 #arrow_down {
     /* display: none; */
 }
+
 #arrow_up {
     display: none;
 }
+
 #arrow_down_2 {
     /* display: none; */
 }
+
 #arrow_up_2 {
     display: none;
 }
+
 .tariffs {
     width: 160px;
     height: 76px;
@@ -144,6 +151,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .tariffs span {
     position: relative;
     color: rgb(11, 60, 50);
@@ -160,19 +168,26 @@
     display: flex;
     flex-direction: column;
 }
+
 #tariffs_2 {
     overflow-x: hidden;
-    width: auto; /* изменено значение свойства */
-    max-width: 160px; /* добавлено новое свойство */
-    height: auto; /* изменено значение свойства */
+    width: auto;
+    /* изменено значение свойства */
+    max-width: 160px;
+    /* добавлено новое свойство */
+    height: auto;
+    /* изменено значение свойства */
     border-radius: 6px;
     background: rgb(255, 255, 255);
     display: flex;
-    flex-direction: column; /* изменено значение свойства */
-    justify-content: space-around; /* изменено значение свойства */
+    flex-direction: column;
+    /* изменено значение свойства */
+    justify-content: space-around;
+    /* изменено значение свойства */
     gap: 6px;
     margin-top: 4px;
-    overflow-y: auto; /* изменено значение свойства */
+    overflow-y: auto;
+    /* изменено значение свойства */
     display: none;
 }
 
@@ -180,6 +195,7 @@
     text-decoration: none;
 
 }
+
 .tariffs .tariff_link {
     color: rgb(11, 60, 50);
     font-family: Ubuntu;
@@ -203,6 +219,8 @@
     line-height: 18px;
     letter-spacing: 0%;
     text-align: center;
+
+    margin-top: 40px;
 }
 
 .submit_wrapper {
@@ -214,4 +232,88 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.employee_add {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: left;
+
+    margin-top: 32px;
+}
+
+.buttons_wrapper {
+    display: flex;
+    gap: 8px;
+}
+
+.download_excel {
+    width: 200px;
+    height: 36px;
+
+    border-radius: 6px;
+
+    background: rgb(255, 255, 255);
+
+    align-items: center;
+
+
+    color: rgb(141, 141, 141);
+    font-family: Ubuntu;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.download_excel_button {
+    width: 120px;
+    height: 32px;
+    box-sizing: border-box;
+    border: 1px solid rgb(234, 204, 118);
+    border-radius: 16px;
+
+    background: rgb(234, 204, 118);
+
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: center;
+
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.download_ready_excel {
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: center;
+
+
+    width: 328px;
+    height: 32px;
+    box-sizing: border-box;
+    border: 1px solid rgb(234, 204, 118);
+    border-radius: 16px;
+
+    background: rgb(234, 204, 118);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+
+    margin-top: 8px;
 }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dms.css">
+    <link rel="stylesheet" type="text/css"
+          href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+</head>
+
+<body>
+<nav>
+    <div class="navbar">
+        <div class="logo">
+            <img src="static/logo.jpg" alt="logo"/>
+        </div>
+        <ul class="navbar_buttons">
+            <li class="navbar_button">
+                <a href="pokupka_polisov.html">Полисы</a>
+            </li>
+            <li class="navbar_button">
+                <a href="dms_rules.html">О нас</a>
+            </li>
+            <li class="navbar_button">
+                <a href="zayavki.html">Выплаты</a>
+            </li>
+            <li class="navbar_button">
+                <a href="login2.html">Профиль</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container">
+    <h1 class="buy_vzr">Покупка ДМС</h1>
+
+    <div class="pay">
+        <form action="" class="pay_form">
+            <div class="dates">
+                <div class="form_field_date">
+                    <input type="date" placeholder="Дата начала" class="input_form_field" id="start_date">
+                </div>
+                <div class="form_field_date">
+                    <input type="date" placeholder="Дата начала" class="input_form_field" id="end_date">
+                </div>
+            </div>
+            <div class="tariff">
+                <div class="tariff_chooser_wrapper">
+                    <div class="tariff_chooser">
+                        <span>Тариф</span>
+                        <a href="" class="tariff_chooser_button_click" id="tariff_chooser_button_click">
+                            <div class="tariff_chooser_button">
+                                <svg id="arrow_up" width="14.828125" height="10.242645"
+                                     viewBox="0 0 14.8281 10.2426" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs/>
+                                    <path id="Vector 3" d="M1.41406 8.82843L7.41406 2.82843L13.4141 8.82843"
+                                          stroke="#EACC76" stroke-opacity="1.000000" stroke-width="4.000000"/>
+                                </svg>
+                                <svg id="arrow_down" width="14.828125" height="10.242645"
+                                     viewBox="0 0 14.8281 10.2426" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs/>
+                                    <path id="Vector 2" d="M13.4141 1.41422L7.41406 7.41422L1.41406 1.41422"
+                                          stroke="#EACC76" stroke-opacity="1.000000" stroke-width="4.000000"/>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tariffs" id="tariffs">
+                        <a href="#" class="tariff_link" data-key="schengen">Базовый</a>
+                        <a href="#" class="tariff_link" data-key="turkey">Оптимальный</a>
+                        <a href="#" class="tariff_link" data-key="usa">VIP</a>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+            <span class="employee_add">Добавление сотрудников</span>
+
+            <div class="buttons_wrapper">
+                <div class="download_excel">Загрузить форму Excel</div>
+                <a href="" class="download_excel_button">Загрузить</a>
+            </div>            
+            <a href="" class="download_ready_excel">Скачать готовую форму Excel</a>
+
+
+            <div class="submit_wrapper">
+                <input type="submit" value="Сохранить" class="btn_save">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script src="/js/vzr.js"></script>
+</body>
+
+</html>

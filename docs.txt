@@ -6,7 +6,7 @@ dms_rules - about the company
 zayavki - list of possible requests
 company_info = info about an insurance company
 pokupka_polisov - list of possible policies
-vzr - dms buy
+vzr - vzr buy
 foreign - vzr buy
 auto_strahovanie - auto insurance
 cargo - грузы
