@@ -10,3 +10,4 @@ vzr - vzr buy
 foreign - vzr buy
 auto_strahovanie - auto insurance
 cargo - грузы
+foreign - vzr payment request

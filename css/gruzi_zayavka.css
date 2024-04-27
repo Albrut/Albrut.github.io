@@ -20,6 +20,7 @@
     border-radius: 10px;
     background: rgb(11, 60, 50);
     width: 408px;
+    height: fit-content;
     margin: auto;
     color: #ffffff;
     /* flex-wrap: wrap; */
@@ -42,16 +43,19 @@
     margin-right: 40px;
     margin-bottom: 8px;
 }
-.polya{
+
+.polya {
     margin-top: 8px;
 }
-.buttons{
+
+.buttons {
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.buttons button{
+
+.buttons button {
     text-align: center;
     width: 140px;
     height: 32px;
@@ -63,18 +67,19 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 .buttons button[type="submit"] {
     font-weight: bold;
     border: 0;
 }
 
-#field{
+#field {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#widget{
+#widget {
     position: relative;
     left: 5px;
     align-items: center;
@@ -87,6 +92,7 @@
     background: rgb(234, 204, 118);
 
 }
+
 #paper {
     position: relative;
     margin-top: 5px;
@@ -95,6 +101,7 @@
     height: 40px;
     border-radius: 6px;
 }
+
 .tariff_chooser {
     width: 328px;
     height: 36px;
@@ -179,7 +186,8 @@
     position: relative;
     right: 11%;
 }
-#save_btn{
+
+#save_btn {
     margin-top: 40px;
 }
 
@@ -196,6 +204,7 @@
     border-radius: 6px;
     background: rgb(234, 204, 118);
 }
+
 .input_file::file-selector-button {
     display: none;
 }
@@ -213,4 +222,14 @@
     line-height: 18px;
     letter-spacing: 0;
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(11, 60, 50);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: left;
 }

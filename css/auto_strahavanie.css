@@ -52,6 +52,8 @@ input[type="checkbox"].checked::before {
     border-radius: 10px;
     background: rgb(11, 60, 50);
     width: 408px;
+    padding: 15px;
+    height: fit-content;
     margin: auto;
     color: #ffffff;
     /* flex-wrap: wrap; */
@@ -63,7 +65,6 @@ input[type="checkbox"].checked::before {
 
 
 .container form {
-    padding-top: 40px;
 }
 
 .container .wrapper {
@@ -129,7 +130,7 @@ input[type="checkbox"].checked::before {
 }
 
 .tariff_chooser {
-    width: 160px;
+    width: 303px;
     height: 36px;
     border-radius: 6px;
     background: rgb(255, 255, 255);
@@ -151,7 +152,7 @@ input[type="checkbox"].checked::before {
 
 .tariff {
     position: relative;
-    left: 36px;
+    left: 8px;
 }
 
 .tariff_chooser_button {
@@ -173,7 +174,7 @@ input[type="checkbox"].checked::before {
 }
 
 .tariffs {
-    width: 160px;
+    width: 303px;
     height: 76px;
     border-radius: 6px;
     background: rgb(255, 255, 255);

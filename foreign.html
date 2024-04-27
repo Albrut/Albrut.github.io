@@ -10,86 +10,65 @@
 </head>
 
 <body>
-<nav>
-    <div class="navbar">
-        <div class="logo">
-            <img src="static/logo.jpg" alt="logo"/>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img src="static/logo.jpg" alt="logo" />
+            </div>
+            <ul class="navbar_buttons">
+                <li class="navbar_button">
+                    <a href="pokupka_polisov.html">Полисы</a>
+                </li>
+                <li class="navbar_button">
+                    <a href="dms_rules.html">О нас</a>
+                </li>
+                <li class="navbar_button">
+                    <a href="zayavki.html">Выплаты</a>
+                </li>
+                <li class="navbar_button">
+                    <a href="login2.html">Профиль</a>
+                </li>
+            </ul>
         </div>
-        <ul class="navbar_buttons">
-            <li class="navbar_button">
-                <a href="pokupka_polisov.html">Полисы</a>
-            </li>
-            <li class="navbar_button">
-                <a href="dms_rules.html">О нас</a>
-            </li>
-            <li class="navbar_button">
-                <a href="zayavki.html">Выплаты</a>
-            </li>
-            <li class="navbar_button">
-                <a href="login2.html">Профиль</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<div class="nazvanie">
-    <h1>Выезд за рубеж</h1>
-</div>
-
-<div class="container">
-
-    <div class="container">
-        <form action="">
-            <input id="searchbar" type="text" name="search" placeholder="Искать услуги">
-        </form>
+    </nav>
+    <div class="nazvanie">
+        <h1>Выезд за рубеж</h1>
     </div>
 
-    <form action="">
-        <div class="polya">
-            <div class="model">
-                <input id="up" placeholder="Сумма выплат">
-            </div>
-        </div>
+    <div class="container_main">
+        <div class="main_block">
+            <form action="" class="service_search">
+                <input type="text" placeholder="Услуга" class="input_field service">
+            </form>
 
-        <div class="polya">
-            <div class="papers">
-                <div id="field">
-                    <input id="paper" placeholder="Мед. документы">
-                    <div class="buttons"> <!-- Кнопочки -->
-<!--                        <button id="widget" type="submit"></button>-->
-                        <input type="file" class="input_file">
-                    </div>
+            <form action="" class="request_form">
+                <input type="text" placeholder="Сумма выплат" class="input_field summ">
+
+                <div class="vertical">
+                    <div class="file_description">Мед. документы</div>
+                    <input type="file"">
                 </div>
-            </div>
-            <div id="field">
-                <input id="paper" placeholder="Документы на выезд">
-                <div class="buttons"> <!-- Кнопочки -->
-<!--                    <button id="widget" type="submit"></button>-->
-                    <input type="file" class="input_file">
+                                <div class="vertical">
+                    <div class="file_description">Документы на выезд</div>
+                    <input type="file"">
                 </div>
-            </div>
-
+                 <div class="vertical">
+                    <div class="file_description">Чеки</div>
+                    <input type="file"">
+                </div>
+ 
+                <button type="submit">Сохранить</button>
+            </form>
         </div>
-        <div id="field">
-            <input id="paper" placeholder="Чеки">
-            <div class="buttons"> <!-- Кнопочки -->
-<!--                <button id="widget" type="submit"></button>-->
-                <input type="file" class="input_file">
-            </div>
-        </div>
+    </div>
 
-        <div class="buttons"> <!-- Кнопочки -->
-            <button type="submit">Сохранить</button>
-        </div>
-    </form>
-</div>
-
-<script>
-    function toggleCheckbox(id) {
-        var checkbox = document.getElementById(id);
-        checkbox.classList.toggle("checked");
-    }
-</script>
-</div>
+    <script>
+        function toggleCheckbox(id) {
+            var checkbox = document.getElementById(id);
+            checkbox.classList.toggle("checked");
+        }
+    </script>
+    </div>
 </body>
 
 </html>

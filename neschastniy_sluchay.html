@@ -38,7 +38,7 @@
 </div>
 
 <div class="container">
-    <form action="">
+    <form action="" class="form">
         <div class="polya" id="dates">
             <span>
                 <input type="date" placeholder="Дата начала">
@@ -57,10 +57,16 @@
                    onclick="toggleCheckbox('checkbox_sobstven')">
             <label for="checkbox_sobstven">застрахован где-то еще</label>
         </div>
-        <button type="submit">Автострахование</button>
+        <button type="submit">Сохранить</button>
     </form>
 </div>
 <script src="js/accident.js"></script>
+<script>
+    function toggleCheckbox(id) {
+    var checkbox = document.getElementById(id);
+    checkbox.classList.toggle("checked");
+}
+</script>
 <!--<script src="js/auto_strahovanie.js"></script>-->
 </body>
 
