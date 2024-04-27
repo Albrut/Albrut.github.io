@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/car_insurance_request.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img src="static/logo.jpg" alt="logo"/>
+            </div>
+            <ul class="navbar_buttons">
+                <li class="navbar_button">
+                    <a href="pokupka_polisov.html">Полисы</a>
+                </li>
+                <li class="navbar_button">
+                    <a href="dms_rules.html">О нас</a>
+                </li>
+                <li class="navbar_button">
+                    <a href="zayavki.html">Выплаты</a>
+                </li>
+                <li class="navbar_button">
+                    <a href="login2.html">Профиль</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+    <div class="nazvanie">
+        <h1>Автомобили</h1>
+    </div>
+    
+    <div class="container" id="container">
+        <form action="">
+            <div class="polya">
+                <div class="model" id="first_pole">
+                    <input id="up" placeholder="Фото с места происшествия">
+                    <input type="file" class="input_file">
+                </div>
+            </div>
+            <div id="field">
+                <input id="paper" placeholder="Фото с места происшествия">
+                <input type="file" class="input_file">
+            </div>
+            <div class="tariff">
+                <div class="tariff_chooser_wrapper">
+                    <div class="tariff_chooser">
+                        <span>Цель поездки</span>
+                        <a href="" class="tariff_chooser_button_click" id="tariff_chooser_button_click">
+                            <div class="tariff_chooser_button">
+                                <svg id="arrow_up" width="14.828125" height="10.242645"
+                                     viewBox="0 0 14.8281 10.2426" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs/>
+                                    <path id="Vector 3" d="M1.41406 8.82843L7.41406 2.82843L13.4141 8.82843"
+                                          stroke="#EACC76" stroke-opacity="1.000000" stroke-width="4.000000"/>
+                                </svg>
+                                <svg id="arrow_down" width="14.828125" height="10.242645"
+                                     viewBox="0 0 14.8281 10.2426" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <desc>
+                                        Created with Pixso.
+                                    </desc>
+                                    <defs/>
+                                    <path id="Vector 2" d="M13.4141 1.41422L7.41406 7.41422L1.41406 1.41422"
+                                          stroke="#EACC76" stroke-opacity="1.000000" stroke-width="4.000000"/>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tariffs" id="tariffs">
+                        <a href="#" class="tariff_link" data-key="schengen">Шенген</a>
+                        <a href="#" class="tariff_link" data-key="turkey">Турция</a>
+                        <a href="#" class="tariff_link" data-key="usa">США</a>
+                    </div>
+    
+    
+                </div>
+            </div>
+            <div class="buttons" id="save_btn">
+    <!--            <button type="submit">Сохранить</button>-->
+                <input type="submit" value="Сохранить" id="submit_form">
+            </div>
+        </form>
+    </div>
+    <!--<script src="js/auto_strahovanie.js"></script>-->
+    <script src="js/car_insurance_request.js"></script>
+</body>
+
+</html>

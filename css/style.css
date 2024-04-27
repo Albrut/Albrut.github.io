@@ -15,6 +15,10 @@ body {
     flex-direction: column;
 }
 
+#container {
+    height: fit-content;
+}
+
 
 
 /* navigation menu */
