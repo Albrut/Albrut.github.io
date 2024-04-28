@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Профиль</title>
+    <link rel="stylesheet" href="css/requests_list.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<nav>
+    <div class="navbar">
+        <div class="logo">
+            <img src="static/logo.jpg" alt="logo"/>
+        </div>
+        <ul class="navbar_buttons">
+            <li class="navbar_button">
+                <a href="pokupka_polisov.html">Полисы</a>
+            </li>
+            <li class="navbar_button">
+                <a href="dms_rules.html">О нас</a>
+            </li>
+            <li class="navbar_button">
+                <a href="zayavki.html">Выплаты</a>
+            </li>
+            <li class="navbar_button">
+                <a href="login2.html">Профиль</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="external_container">
+    <div class="container" id="container">
+        <div class="wrapper" id="wrapper">
+           
+
+            <!-- everything about user's requests -->
+            <div class="requests_container">
+                <div class="request_options">
+                    <div class="processed_requests" id="processed_requests">
+                        <a href="" class="url_processed_requests" id="url_processed_requests">Обработанные заявки</a>
+                    </div>
+
+                    <div class="unprocessed_requests" id="unprocessed_requests">
+                        <a href="" class="url_unprocessed_requests" id="url_unprocessed_requests">Необработанные
+                            заявки</a>
+                    </div>
+                </div>
+                <div class="responses">
+                    <div class="response_processed" id="response_processed">
+                        <span class="id" id="processed_id">ID</span>
+                        <span class="service" id="processed_service">Вид страхования</span>
+                        <span class="asked_sum" id="processed_asked_sum">Сумма</span>
+                        <span class="approved_sum" id="processed_approved_sum">Дата</span>
+                    </div>
+
+                    <div class="response_unprocessed" id="response_unprocessed">
+                        <span class="id" id="unprocessed_id">ID</span>
+                        <span class="service" id="unprocessed_service">Услуга</span>
+                        <span class="asked_sum_unprocessed" id="unprocessed_asked_sum">Запрошенная сумма</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="add_buttons"></div>
+        </div>
+    </div>
+
+</div>
+<script src="js/profile.js"></script>
+</body>
+
+</html>

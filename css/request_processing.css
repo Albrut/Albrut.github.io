@@ -1,0 +1,75 @@
+.wrapper {
+    width: 1168px;
+    height: 368px;
+    box-sizing: border-box;
+    border: 1px solid rgb(11, 60, 50);
+    border-radius: 10px;
+
+    background: rgb(255, 255, 255);
+}
+
+.left {
+    display: inline-flex;
+    gap: 4px;
+    flex-direction: column;
+
+}
+
+.right {
+    display: inline-flex;
+    gap: 4px;
+    flex-direction: column;
+    margin-left: 300px;
+
+}
+
+.horizontal {
+    display: flex;
+    gap: 4px;
+
+    align-items: center;
+}
+
+.photo_explanation {
+    width: 284px;
+    height: 36px;
+    box-sizing: border-box;
+    border: 1px solid rgb(11, 60, 50);
+    border-radius: 6px;
+
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+}
+
+.download_photo {
+    width: 36px;
+    height: 28px;
+    box-sizing: border-box;
+    border: 1px solid rgb(234, 204, 118);
+    border-radius: 6px;
+
+    background: rgb(234, 204, 118);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    display: block;
+    margin: auto;
+    margin-top: 80px;
+
+    width: 127px;
+    height: 32px;
+    border-radius: 16px;
+
+    background: rgb(234, 204, 118);
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: center;
+}
