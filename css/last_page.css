@@ -1,0 +1,44 @@
+.wrapper {
+    width: 1052px;
+    height: 500px;
+    box-sizing: border-box;
+    border: 1px solid rgb(11, 60, 50);
+}
+
+.item_wrapper {
+    display: flex;
+}
+
+.item {
+    border: 1px solid rgb(11, 60, 50);
+    flex: 1;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.horizontal label {
+    color: rgb(11, 60, 50);
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+.checkboxes {
+    position: absolute;
+    right: 80px;
+    top: 200px;
+}
