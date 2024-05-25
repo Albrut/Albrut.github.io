@@ -31,7 +31,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             "username": JSON.parse(localStorage.getItem("user_info")).login,
             "password": JSON.parse(localStorage.getItem("user_info")).password1,
         }
-        fetch('http://35.192.170.245:8000/api/register/', {
+
+        console.log(JSON.stringify(formData));
+
+        fetch('http://95.87.93.126/api/register/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

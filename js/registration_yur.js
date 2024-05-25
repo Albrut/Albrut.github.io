@@ -38,7 +38,7 @@ form.addEventListener("submit", function (event) {
     };
     console.log(JSON.stringify(formData));
 
-    fetch('http://35.192.170.245:8000/api/register/', {
+    fetch('http://95.87.93.126/api/register/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
