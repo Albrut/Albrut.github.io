@@ -1,3 +1,34 @@
+const user = JSON.parse(localStorage.getItem("user"));
+const url = 'http://95.87.93.126/api/get_companies/';
+const token = localStorage.getItem("accessToken"); // замените на ваш реальный Bearer Token
+
+fetch(url, {
+    method: 'GET',
+    headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+    }
+})
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        data.forEach(function (company) {
+            if (user.company === company.name) {
+                localStorage.setItem("company", company.id);
+            } else {
+                localStorage.setItem("company", 1);
+            }
+        })
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+
+
 const form = document.querySelector('form');
 
 form.addEventListener('submit', function (event) {
@@ -16,11 +47,12 @@ form.addEventListener('submit', function (event) {
         "insurance_territory": insuranceTerritory,
         "insured_elsewhere": checkboxSobstven,
         "price": 123,
-        "insurance_company": 1
+        "insurance_company": localStorage.getItem("company")
     };
+    console.log(JSON.stringify(formData));
 
     // Отправляем данные на сервер
-    fetch('http://35.192.170.245:8000/api/accidient/create/platform/', {
+    fetch('http://95.87.93.126/api/accidient/create/platform/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
