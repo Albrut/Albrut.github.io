@@ -96,6 +96,46 @@ tariffLinks.forEach(link => {
 });
 
 
+
+
+
+
+
+
+
+
+
+const url = 'http://95.87.93.126/api/get_companies/';
+const token = localStorage.getItem("accessToken"); // замените на ваш реальный Bearer Token
+
+fetch(url, {
+    method: 'GET',
+    headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+    }
+})
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+    }
+    return response.json();
+})
+.then(data => {
+  data.forEach(function (company) {
+    if (user.company === company.name) {
+      localStorage.setItem("company", company.id);
+    } else {
+      localStorage.setItem("company", 1);
+    }
+  })
+})
+.catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+});
+
+
+
 const form = document.querySelector('.pay_form');
 
 form.addEventListener('submit', function (event) {
@@ -113,6 +153,7 @@ form.addEventListener('submit', function (event) {
         "price": 123,
         "insurance_company": 1
     };
+    console.log(JSON.stringify(formData));
 
     // отправить POST запрос
     fetch('http://35.192.170.245:8000/api/vzr/create/platform/', {

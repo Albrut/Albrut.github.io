@@ -13,7 +13,7 @@ fetch("http://35.192.170.245:8000/api/profile/", {
     .then(response => response.json())
     .then(data => {
         console.log(localStorage.getItem("accessToken"));
-        console.log(data.user);
+        localStorage.setItem("user", data.user);
         var name = document.getElementById("name");
         var inn = document.getElementById("inn");
         name.innerHTML = data.user.first_name + " " + data.user.last_name;

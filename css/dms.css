@@ -248,6 +248,8 @@
 .buttons_wrapper {
     display: flex;
     gap: 8px;
+    align-items: center;
+    justify-content: center;
 }
 
 .download_excel {
@@ -291,6 +293,9 @@
     text-decoration: none;
     align-items: center;
     justify-content: center;
+}
+.download_excel_button::-webkit-file-upload-button {
+    display: none;
 }
 
 .download_ready_excel {
