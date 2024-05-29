@@ -38,23 +38,23 @@
     <div class="container_main">
         <div class="main_block">
             <form action="" class="service_search">
-                <input type="text" placeholder="Услуга" class="input_field service">
+                <input type="text" placeholder="Услуга" class="input_field service" id="service">
             </form>
 
             <form action="" class="request_form">
-                <input type="text" placeholder="Сумма выплат" class="input_field summ">
+                <input type="text" placeholder="Сумма выплат" class="input_field summ" id="summ">
 
                 <div class="vertical">
                     <div class="file_description">Мед. документы</div>
-                    <input type="file"">
+                    <input type="file"" id="paper1">
                 </div>
                                 <div class="vertical">
                     <div class="file_description">Документы на выезд</div>
-                    <input type="file"">
+                    <input type="file"" id="paper2">
                 </div>
                  <div class="vertical">
                     <div class="file_description">Чеки</div>
-                    <input type="file"">
+                    <input type="file"" id="paper3">
                 </div>
  
                 <button type="submit">Сохранить</button>
@@ -69,6 +69,7 @@
         }
     </script>
     </div>
+    <script src="js/foreign.js"></script>
 </body>
 
 </html>

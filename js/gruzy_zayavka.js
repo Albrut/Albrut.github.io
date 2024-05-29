@@ -1,4 +1,5 @@
 const form = document.querySelector('form');
+var tariff_chooser_span = document.querySelector(".tariff_chooser span")
 
 form.addEventListener('submit', function (event) {
     event.preventDefault(); // Предотвращаем отправку формы по умолчанию
@@ -12,19 +13,20 @@ form.addEventListener('submit', function (event) {
     const data = {
         "accidentPlace": place,
         "image": file, // Если нужно, вы можете добавить путь к файлу, но это может быть небезопасно
-        "policy_num": 1
+        "policy_num": tariff_chooser_span.id
     };
 
+    console.log(data);
     // Отправляем данные на сервер
     sendDataToServer(data);
 });
 
 function sendDataToServer(data) {
     // Преобразуем объект JSON в строку
-    const jsonData = JSON.stringify(data);
+    const jsonData = data;
 
     // Отправляем данные на сервер
-    fetch('http://35.192.170.245:8000/api/payment/cargo/request/', {
+    fetch('http://95.87.93.126/api/payment/cargo/request/', {
         method: 'POST',
         headers: {
             'Content-Type': 'multipart-form/data',
@@ -65,3 +67,18 @@ tariff_chooser_button_click.addEventListener("click", function (event) {
         tariff_opened = false;
     }
 });
+
+var tariff_links = document.querySelectorAll('.tariffs .tariff_link');
+tariff_links.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+        event.preventDefault();
+        tariff_id = link.id;
+        tariffs.style.display = "none";
+        arrow_up.style.display = "none";
+        arrow_down.style.display = "block";
+        tariff_opened = false;
+
+        tariff_chooser_span.textContent = link.textContent;
+        tariff_chooser_span.id = link.id;
+    });
+})

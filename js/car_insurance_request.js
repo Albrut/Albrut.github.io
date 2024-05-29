@@ -1,4 +1,5 @@
 const form = document.querySelector('form');
+const user = JSON.parse(localStorage.getItem("user"));
 
 form.addEventListener('submit', function (event) {
     event.preventDefault(); // Предотвращаем отправку формы по умолчанию
@@ -21,7 +22,7 @@ form.addEventListener('submit', function (event) {
 
 function sendDataToServer(data) {
     // Преобразуем объект JSON в строку
-    const jsonData = JSON.stringify(data);
+    const jsonData = data;
 
     // Отправляем данные на сервер
     fetch('http://35.192.170.245:8000/api/payment/cargo/request/', {
