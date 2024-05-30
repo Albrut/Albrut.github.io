@@ -9,12 +9,12 @@ form.addEventListener('submit', function (event) {
     const photo = document.getElementById('paper').value; // Ваш файл для загрузки
     const file = document.querySelector('.input_file').files[0]; // Получаем файл из input
 
-    // Создаем объект JSON
-    const data = {
-        "accidentPlace": place,
-        "image": file, // Если нужно, вы можете добавить путь к файлу, но это может быть небезопасно
-        "policy_num": tariff_chooser_span.id
-    };
+
+    var data = new FormData();
+    data.append("accidentPlace", place);
+    data.append("user", 1);
+    data.append("policy", 1);
+    
 
     console.log(data);
     // Отправляем данные на сервер

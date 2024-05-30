@@ -66,3 +66,29 @@ tariff_chooser_button_click.addEventListener("click", function (event) {
         tariff_opened = false;
     }
 });
+
+
+
+// Находим все элементы с классом "tariff_link"
+const tariffLinks = document.querySelectorAll('.tariff_link');
+
+// Для каждой ссылки добавляем обработчик события клика
+tariffLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        // Получаем значение атрибута data-key
+        const key = this.getAttribute('data-key');
+
+        if (['schengen', 'turkey', 'usa'].includes(key)) {
+            // Если находится, присваиваем его к переменной choice1
+            trip_goal = key;
+        } else {
+            // Если не находится, присваиваем его к переменной choice2
+            insurance_territory = key;
+        }
+        // Выводим ключ в консоль
+        tariffs.style.display = "none";
+        arrow_up.style.display = "none";
+        arrow_down.style.display = "block";
+        tariff_opened = false;
+    });
+});

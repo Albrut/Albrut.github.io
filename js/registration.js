@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             "first_name": personNameInput.value,
             "last_name": personSurnameInput.value,
             "place_of_birth": birthPlaceInput.value,
-            "date_of_birth": birthDateInput.value,
+            "date_of_birth": birthDateInput.value + "T00:00:00Z",
             "passport_number": passNumberInput.value,
-            "date_of_issue": passDateInput.value,
-            "date_of_expiration": passExpirationDateInput.value,
+            "date_of_issue": passDateInput.value + "T00:00:00Z",
+            "date_of_expiration": passExpirationDateInput.value + "T00:00:00Z",
             "residential_addres": registrationAddressInput.value,
             "place_of_residence": addressInput.value,
             "email": JSON.parse(localStorage.getItem("user_info")).email,
@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             })
             .then(data => {
                 console.log(data);
+                window.location.href = "profile.html";
             })
             .catch(error => {
                 console.error('There has been a problem with your fetch operation:', error);

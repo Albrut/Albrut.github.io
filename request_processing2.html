@@ -26,7 +26,7 @@
                     <a href="zayavki.html">Выплаты</a>
                 </li>
                 <li class="navbar_button">
-                    <a href="login2.html">Профиль</a>
+                    <a href="profile.html">Профиль</a>
                 </li>
             </ul>
         </div>
@@ -36,11 +36,11 @@
     <div class="container">
         <div class="wrapper">
             <div class="left">
-                <p>ФИО клиента:</p>
-                <p>ИНН клиента:</p>
-                <p>Услуга</p>
-                <p>Сумма</p>
-                <p>Номер полиса</p>
+                <p id="fio">ФИО клиента:</p>
+                <p id="inn">ИНН клиента:</p>
+                <p id="service">Услуга</p>
+                <p id="summ">Сумма</p>
+                <p id="policy_num">Номер полиса</p>
 
                 <div class="horizontal" style="margin-top: 116px;">
                     <input type="checkbox">
@@ -49,13 +49,13 @@
             </div>
 
             <div class="right">
-                <p>Дата начала полиса:</p>
-                <p>Дата окончания полиса:</p>
-                <p>Дата заявки:</p>
+                <p id="date_start">Дата начала полиса:</p>
+                <p id="date_end">Дата окончания полиса:</p>
+                <p id="date_request">Дата заявки:</p>
 
                 <div class="horizontal">
                     <div class="photo_explanation">Мед. документы</div>
-                    <a href="" class="download_photo"><svg width="16.000000" height="16.000000" viewBox="0 0 16 16" fill="none"
+                    <a href="" class="download_photo" id="med_docs"><svg width="16.000000" height="16.000000" viewBox="0 0 16 16" fill="none"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <desc>
                                 Created with Pixso.
@@ -69,7 +69,7 @@
                 </div>
                 <div class="horizontal">
                     <div class="photo_explanation">Документы на выезд</div>
-                    <a href="" class="download_photo"><svg width="16.000000" height="16.000000" viewBox="0 0 16 16" fill="none"
+                    <a href="" class="download_photo" id="vzr_docs"><svg width="16.000000" height="16.000000" viewBox="0 0 16 16" fill="none"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <desc>
                                 Created with Pixso.
@@ -82,7 +82,7 @@
                     </a>
                 </div>
                 <div class="horizontal">
-                    <div class="photo_explanation">Чеки</div>
+                    <div class="photo_explanation" id="invoice">Чеки</div>
                     <a href="" class="download_photo"><svg width="16.000000" height="16.000000" viewBox="0 0 16 16" fill="none"
                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <desc>
@@ -100,6 +100,8 @@
             <button type="submit">Сохранить</button>
         </div>
     </div>
+
+    <script src="js/request_processing2.js"></script>
 </body>
 
 </html>

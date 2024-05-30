@@ -52,6 +52,7 @@ button {
 
 .wrapper {
     display: flex;
+    justify-content: center;
 }
 
 .container:last-child {

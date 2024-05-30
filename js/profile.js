@@ -4,27 +4,38 @@ var responseProcessedContent = [];
 const accessToken = localStorage.getItem("accessToken");
 console.log(accessToken);
 
-fetch("http://35.192.170.245:8000/api/profile/", {
-    method: "GET",
-    headers: {
-        "Authorization": `Bearer ${accessToken}`
-    }
-})
-    .then(response => response.json())
-    .then(data => {
-        console.log(localStorage.getItem("accessToken"));
-        localStorage.setItem("user", data.user);
-        var name = document.getElementById("name");
-        var inn = document.getElementById("inn");
-        name.innerHTML = data.user.first_name + " " + data.user.last_name;
-        inn.innerHTML = data.user.inn;
-    })
-    .catch(error => {
-        // console.error("Error:", error);
-        console.log("huy");
-    });
+window.addEventListener("load", function () {
+    var user = JSON.parse(localStorage.getItem("user"));
+    var name = document.getElementById("name");
+    var inn = document.getElementById("inn");
+    name.innerHTML = user.first_name + " " + user.last_name;
+    inn.innerHTML = user.inn;
 
-fetch("http://95.87.93.126/api/", {
+    // fetch("http://35.192.170.245:8000/api/profile/", {
+    //     method: "GET",
+    //     headers: {
+    //         "Authorization": `Bearer ${accessToken}`
+    //     }
+    // })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log(data);
+    //         console.log(localStorage.getItem("accessToken"));
+    //         localStorage.setItem("user", data.user);
+    //         var name = document.getElementById("name");
+    //         var inn = document.getElementById("inn");
+    //         name.innerHTML = data.user.first_name + " " + data.user.last_name;
+    //         inn.innerHTML = data.user.inn;
+    //     })
+    //     .catch(error => {
+    //         // console.error("Error:", error);
+    //         console.log("huy");
+    //     });
+
+
+});
+
+fetch("http://95.87.93.126/api/payment/vzr/by_user/", {
     method: "GET",
     headers: {
         "Authorization": `Bearer ${accessToken}`
@@ -38,7 +49,7 @@ fetch("http://95.87.93.126/api/", {
         console.log(payments);
         // Проходимся по каждому элементу в массиве данных
         payments.forEach(function (request) {
-            if (request.processed == true) {
+            if (request.approved === true) {
                 // Создаем новый элемент response_processed
                 var responseProcessed = document.createElement("div");
                 responseProcessed.classList.add("response_processed");
@@ -55,11 +66,11 @@ fetch("http://95.87.93.126/api/", {
 
                 var askedSumSpan = document.createElement("span");
                 askedSumSpan.classList.add("asked_sum");
-                askedSumSpan.textContent = request.paymentSumm;
+                askedSumSpan.textContent = request.summ;
 
                 var approvedSumSpan = document.createElement("span");
                 approvedSumSpan.classList.add("approved_sum");
-                approvedSumSpan.textContent = request.finalSumm;
+                approvedSumSpan.textContent = request.final_summ;
 
                 // Добавляем спаны в элемент response_processed
                 responseProcessed.appendChild(idSpan);
@@ -71,7 +82,7 @@ fetch("http://95.87.93.126/api/", {
                 responsesContainer.appendChild(responseProcessed);
 
                 responseProcessedContent = document.querySelectorAll("#response_processed_content");
-            } else if (request.processed == false) {
+            } else if (request.approved === false) {
                 // Создаем новый элемент response_unprocessed
                 var responseUnprocessed = document.createElement("div");
                 responseUnprocessed.classList.add("response_unprocessed");
@@ -84,16 +95,26 @@ fetch("http://95.87.93.126/api/", {
 
                 var serviceSpan = document.createElement("span");
                 serviceSpan.classList.add("service");
-                serviceSpan.textContent = request.service;
+                serviceSpan.textContent = "Выезд за рубеж";
 
                 var askedSumSpan = document.createElement("span");
                 askedSumSpan.classList.add("asked_sum_unprocessed");
-                askedSumSpan.textContent = request.paymentSumm;
+                askedSumSpan.textContent = request.summ;
 
                 // Добавляем спаны в элемент response_unprocessed
                 responseUnprocessed.appendChild(idSpan);
                 responseUnprocessed.appendChild(serviceSpan);
                 responseUnprocessed.appendChild(askedSumSpan);
+
+                responseUnprocessed.addEventListener("click", function (event) {
+                    event.preventDefault();
+
+                    
+                    console.log(request);
+                    localStorage.setItem("request", JSON.stringify(request));
+                    console.log(JSON.parse(localStorage.getItem("request")));
+                    window.location.href = "request_processing2.html";
+                });
 
                 // Добавляем элемент response_unprocessed в контейнер responsesContainer
                 responsesContainer.appendChild(responseUnprocessed);

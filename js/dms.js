@@ -109,7 +109,7 @@ pay_form.addEventListener('submit', function (event) {
       'Content-Type': 'application/json', // Указываем, что данные отправляются в формате JSON
       "Authorization": `Bearer ${localStorage.getItem("accessToken")}`
     },
-    body: JSON.stringify(formData) // Преобразуем объект данных в JSON строку
+    body: formData // Преобразуем объект данных в JSON строку
   };
 
   // Выполняем запрос

@@ -53,6 +53,7 @@ form.addEventListener("submit", function (event) {
         })
         .then(data => {
             console.log(data);
+            window.location.href = "profile.html";
         })
         .catch(error => {
             console.error('There has been a problem with your fetch operation:', error);
